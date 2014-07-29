@@ -22,3 +22,5 @@ FORMS    += mainwindow.ui
 
 RESOURCES += \
     music.qrc
+
+RC_FILE +=myico.rc

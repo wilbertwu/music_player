@@ -8,6 +8,7 @@
 #include<QTextStream>
 #include<list>
 #include<string>
+#include<QSystemTrayIcon>
 using namespace std;
 namespace Ui {
 class MainWindow;
@@ -65,6 +66,7 @@ private:
     bool playOrpause;
     int volume;
     list<QString> stringlist;
+    QSystemTrayIcon *trayIcon;
 };
 
 #endif // MAINWINDOW_H
