@@ -42,25 +42,7 @@ MainWindow::MainWindow(QWidget *parent) :
         ui->tableWidget->setItem(rownum, 2, new QTableWidgetItem(path));
     }
     in.close();
-
-
     //playerList->addMedia(QUrl::fromLocalFile("F:\\04.mp3"));
-    trayIcon = new QSystemTrayIcon(this);
-    const QIcon icon("F:\\库\\图片\\1.jpg");
-    trayIcon->setIcon(icon);
-    trayIcon->setToolTip(tr("简易音乐播放器"));
-    QMenu menu(this);
-    menu.addAction(ui->actionPrevious);
-    menu.addAction(ui->actionPause);
-    menu.addAction(ui->actionNext);
-    menu.addAction(ui->actionExit);
-    QAction restoreAction=new QAction(tr("打开主面板"), this);
-    connect(restoreAction, SIGNAL(triggered()), this, SLOT(show()));
-    menu.addAction(restoreAction);
-    trayIcon->setContextMenu(menu);
-    trayIcon->show();
-
-
     playerList->setPlaybackMode(QMediaPlaylist::CurrentItemOnce);
     player->setPlaylist(playerList);
     playOrpause = true;
